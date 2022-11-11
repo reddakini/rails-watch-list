@@ -1,0 +1,16 @@
+
+<div class="container">
+  <h1>Check out our lists of movies</h1>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <% @lists.each do |list| %>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= link_to list.name, list_path(list) %>
+            <span class="badge bg-primary rounded-pill"> <%= list.bookmarks.count %> </span>
+          </li>
+      <% end %>
+    </div>
+  </div>
+</div>

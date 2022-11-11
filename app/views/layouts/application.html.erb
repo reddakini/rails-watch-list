@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <nav class="navbar bg-light">
+      <div class="container container-fluid">
+        <%= link_to root_path do %>
+          <%= image_tag "logo_movie.png", alt: "Popcorntime", height: 70, class:"navbar-brand" %>
+        <% end %>
+        <h2>A Badass Movie Watch List</h2>
+        <%= link_to "Create a new List", new_list_path, class: "btn btn-primary"%>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
